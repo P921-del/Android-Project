@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" package="com.example.food_order_application">
+    <!-- //Adding Read External Storage Premission -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Food_Order_Application"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.Item.ShowDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Admin.AllItemsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Admin.AddItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Admin.AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AccountActivities.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AccountActivities.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.IntroActivity"
+            android:exported="false" >
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </ activity>
+    </application>
+
+</manifest>

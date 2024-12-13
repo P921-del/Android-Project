@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Food_Order_Application</string>
+    <string name="Background_intro">BackgroundForIntroActivity</string>
+    <string name="The_Only_button_in_the_IntroActivity">Get Started</string>
+</resources>
