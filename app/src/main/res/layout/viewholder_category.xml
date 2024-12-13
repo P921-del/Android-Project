@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CategoryLayout"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/background_category"
+    android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/categoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#6e6e70"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/categoryImage"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/categoryImage"
+        tools:layout_editor_absoluteY="166dp" />
+
+    <ImageView
+        android:id="@+id/categoryImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/BurgerSandwish" />
+</androidx.constraintlayout.widget.ConstraintLayout>
