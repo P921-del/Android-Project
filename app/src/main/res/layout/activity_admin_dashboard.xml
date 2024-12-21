@@ -79,6 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="casual"
                 android:text="Pending Orders"
                 android:textColor="#FF5722"
@@ -86,14 +87,13 @@
                 app:layout_constraintEnd_toEndOf="@+id/imageView5"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="62dp" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
-                android:layout_marginTop="4dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="30"
                 android:textColor="@color/black"
@@ -106,34 +106,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                app:srcCompat="@drawable/baseline_assignment_turned_in_24"
-                tools:layout_editor_absoluteX="213dp"
-                tools:layout_editor_absoluteY="28dp" />
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_assignment_turned_in_24" />
 
             <TextView
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:fontFamily="casual"
                 android:text="Completed\nOrders"
                 android:textAlignment="center"
                 android:textColor="#FF5722"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                app:layout_constraintHorizontal_bias="0.558"
                 app:layout_constraintStart_toStartOf="@+id/imageView6"
-                tools:layout_editor_absoluteY="63dp" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
             <TextView
                 android:id="@+id/textView22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="30"
                 android:textColor="#f2f213"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView21"
+                app:layout_constraintHorizontal_bias="0.545"
                 app:layout_constraintStart_toStartOf="@+id/textView21"
-                tools:layout_editor_absoluteY="116dp" />
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
             <ImageView
                 android:id="@+id/imageView8"
@@ -150,53 +156,57 @@
                 android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:fontFamily="casual"
                 android:text="Time\nEarning"
                 android:textAlignment="center"
                 android:textColor="#FF5722"
                 android:textSize="14sp"
-                tools:layout_editor_absoluteX="301dp"
-                tools:layout_editor_absoluteY="61dp" />
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintHorizontal_bias="0.611"
+                app:layout_constraintStart_toEndOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
             <TextView
                 android:id="@+id/textView24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="30$"
                 android:textColor="#50e810"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView23"
-                app:layout_constraintHorizontal_bias="0.481"
+                app:layout_constraintHorizontal_bias="0.687"
                 app:layout_constraintStart_toStartOf="@+id/textView23"
-                tools:layout_editor_absoluteY="115dp" />
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="388dp"
-        android:layout_height="602dp"
-        android:layout_marginTop="48dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView2"
+            android:id="@+id/ShowAllUsersButton"
             android:layout_width="150dp"
             android:layout_height="100dp"
             android:background="@drawable/buttons_background_admin_panel"
             android:outlineSpotShadowColor="@color/main_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/cardView8"
+            app:layout_constraintStart_toStartOf="@+id/AddCustomarButton"
             app:layout_constraintTop_toTopOf="parent">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/buttons_background_admin_panel"
-                >
+                android:background="@drawable/buttons_background_admin_panel">
 
                 <ImageView
                     android:id="@+id/imageView10"
@@ -206,14 +216,14 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/baseline_archive_24" />
+                    app:srcCompat="@drawable/view" />
 
                 <TextView
                     android:id="@+id/textView26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:text="Show All Items"
+                    android:layout_marginTop="18dp"
+                    android:text="Show All Users"
                     android:textColor="@color/main_color"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="@+id/imageView10"
@@ -224,35 +234,34 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView3"
+            android:id="@+id/addItemAdminPanel"
             android:layout_width="150dp"
             android:layout_height="100dp"
             android:outlineSpotShadowColor="@color/main_color"
-            app:layout_constraintEnd_toEndOf="@+id/cardView10"
+            app:layout_constraintEnd_toEndOf="@+id/ShowAllOrdersButton"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
+
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/addItemAdminPanel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/buttons_background_admin_panel"
-                >
+                android:background="@drawable/buttons_background_admin_panel">
 
                 <ImageView
                     android:id="@+id/imageView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
                     android:layout_marginTop="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/baseline_add_circle_outline_24" />
+                    app:srcCompat="@drawable/food_and_restaurant" />
 
                 <TextView
                     android:id="@+id/textView25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="18dp"
                     android:text="Add Item"
                     android:textColor="@color/main_color"
                     android:textSize="20sp"
@@ -264,24 +273,20 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView8"
+            android:id="@+id/AddCustomarButton"
             android:layout_width="150dp"
             android:layout_height="100dp"
             android:layout_marginEnd="4dp"
-
-            android:layout_marginBottom="72dp"
-
+            android:layout_marginTop="60dp"
             android:background="@drawable/buttons_background_admin_panel"
             android:outlineSpotShadowColor="@color/main_color"
-            app:layout_constraintBottom_toTopOf="@+id/cardView11"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/cardView11">
+            app:layout_constraintTop_toBottomOf="@+id/ShowAllUsersButton">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/buttons_background_admin_panel"
-                >
+                android:background="@drawable/buttons_background_admin_panel">
 
                 <ImageView
                     android:id="@+id/imageView11"
@@ -291,107 +296,56 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/baseline_account_circle_24" />
+                    app:srcCompat="@drawable/customer_service" />
 
                 <TextView
                     android:id="@+id/textView27"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="18dp"
                     android:text="Add Customar"
                     android:textColor="@color/main_color"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="@+id/imageView11"
-                    app:layout_constraintHorizontal_bias="0.492"
                     app:layout_constraintStart_toStartOf="@+id/imageView11"
                     app:layout_constraintTop_toBottomOf="@+id/imageView11" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView9"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginBottom="164dp"
-            android:background="@drawable/buttons_background_admin_panel"
-            android:outlineSpotShadowColor="@color/main_color"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/cardView10"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent" >
-    </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView10"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="72dp"
-            android:background="@drawable/buttons_background_admin_panel"
-
-            android:outlineSpotShadowColor="@color/main_color"
-            app:layout_constraintBottom_toTopOf="@+id/cardView9"
-            app:layout_constraintStart_toStartOf="parent" >
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/buttons_background_admin_panel"
-                >
-
-                <ImageView
-                    android:id="@+id/imageView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/baseline_dashboard_24" />
-
-                <TextView
-                    android:id="@+id/textView28"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:text="Show All Orders"
-                    android:textColor="@color/main_color"
-                    android:textSize="18sp"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView12"
-                    app:layout_constraintHorizontal_bias="0.492"
-                    app:layout_constraintStart_toStartOf="@+id/imageView12"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView12" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView11"
+            android:id="@+id/LogoutButton"
             android:layout_width="150dp"
             android:layout_height="100dp"
-            android:layout_marginEnd="4dp"
+            android:layout_marginEnd="40dp"
             android:layout_marginBottom="164dp"
             android:background="@drawable/buttons_background_admin_panel"
             android:outlineSpotShadowColor="@color/main_color"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" >
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/buttons_background_admin_panel"
-                >
+                android:background="@drawable/buttons_background_admin_panel">
 
                 <ImageView
                     android:id="@+id/imageView13"
-                    android:layout_width="23dp"
-                    android:layout_height="24dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_marginTop="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/baseline_exit_to_app_24" />
+                    app:srcCompat="@drawable/logout" />
 
                 <TextView
                     android:id="@+id/textView29"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="8dp"
                     android:text="Log Out"
                     android:textColor="#f23030"
                     android:textSize="20sp"
@@ -401,6 +355,48 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView13" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ShowAllOrdersButton"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/buttons_background_admin_panel"
+
+            android:outlineSpotShadowColor="@color/main_color"
+            app:layout_constraintBottom_toTopOf="@+id/LogoutButton"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/buttons_background_admin_panel">
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/delivery_man" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Show All Orders"
+                    android:textColor="@color/main_color"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView12"
+                    app:layout_constraintHorizontal_bias="0.492"
+                    app:layout_constraintStart_toStartOf="@+id/imageView12"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

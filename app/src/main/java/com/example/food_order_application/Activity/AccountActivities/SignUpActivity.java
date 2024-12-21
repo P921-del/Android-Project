@@ -3,7 +3,6 @@ package com.example.food_order_application.Activity.AccountActivities;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PatternMatcher;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Patterns;
@@ -14,15 +13,10 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.food_order_application.Activity.AccountActivities.LoginActivity;
-import com.example.food_order_application.Activity.CartActivity;
 import com.example.food_order_application.Domains.Customar;
 import com.example.food_order_application.Encryption_And_Decryption_Algorithm.AESCrypt;
 import com.example.food_order_application.Helpers.Food_Order_Application_Database;
 import com.example.food_order_application.R;
-import com.google.android.material.internal.TextWatcherAdapter;
-
-import java.security.GeneralSecurityException;
 
 public class SignUpActivity extends AppCompatActivity {
     TextView alreadyHaveAccount;

@@ -1,7 +1,6 @@
 package com.example.food_order_application.Adapters;
 
-import android.content.Intent;
-import android.graphics.Bitmap;
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,21 +11,22 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.food_order_application.Activity.Item.ShowDetailsActivity;
 import com.example.food_order_application.Domains.Item;
+import com.example.food_order_application.Interfaces.OnItemClickListener;
 import com.example.food_order_application.R;
 
-import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemViewHolder> {
     byte[] imageInBytes;
     ArrayList<Item> ItemList;
     int CustomarID;
+    OnItemClickListener Listener;
     int drawbleResourceIdForItemPicture;
-    public ItemListAdapter(ArrayList<Item> ItemList) {
+    public ItemListAdapter(ArrayList<Item> ItemList , OnItemClickListener listener) {
         this.ItemList = ItemList;
         this.CustomarID = CustomarID;
+        this.Listener = listener;
     }
 
     @NonNull
@@ -42,14 +42,14 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemVi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ItemViewHolder ItemViewHolder, int i) {
+    public void onBindViewHolder(@NonNull ItemViewHolder ItemViewHolder, @SuppressLint("RecyclerView") int i) {
         ItemViewHolder.Picture.setImageBitmap(ItemList.get(i).getPicture());
         ItemViewHolder.Title.setText(ItemList.get(i).getTitle());
         ItemViewHolder.Price.setText(String.valueOf(ItemList.get(i).getPrice()));
         ItemViewHolder.addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentForItemShowDetails = new Intent(ItemViewHolder.addButton.getContext(), ShowDetailsActivity.class);
+               /* Intent intentForItemShowDetails = new Intent(ItemViewHolder.addButton.getContext(), ShowDetailsActivity.class);
                 intentForItemShowDetails.putExtra("CustoamrID",CustomarID);
                 intentForItemShowDetails.putExtra("Title",ItemList.get(i).getTitle());
                 intentForItemShowDetails.putExtra("Description",ItemList.get(i).getDescription());
@@ -59,13 +59,14 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemVi
                 intentForItemShowDetails.putExtra("Calories",ItemList.get(i).getCalories());
                 ItemList.get(i).setQuantity(1);
                 intentForItemShowDetails.putExtra("Quantity",ItemList.get(i).getQuantity());
-                intentForItemShowDetails.putExtra("Price",ItemList.get(i).getPrice());
+                intentForItemShowDetails.putExtra("Price",ItemList.get(i).getPrice());*/
                 //how to save image inside android with java project
-                ByteArrayOutputStream objectByteOutputStream = new ByteArrayOutputStream();
+                /*ByteArrayOutputStream objectByteOutputStream = new ByteArrayOutputStream();
                 ItemList.get(i).getPicture().compress(Bitmap.CompressFormat.JPEG,100,objectByteOutputStream);
                 imageInBytes = objectByteOutputStream.toByteArray();
                 intentForItemShowDetails.putExtra("Picture",imageInBytes);
-                ItemViewHolder.itemView.getContext().startActivity(intentForItemShowDetails);
+                ItemViewHolder.itemView.getContext().startActivity(intentForItemShowDetails);*/
+                Listener.OnItemClick(ItemList.get(i).getId());
 
             }
         });

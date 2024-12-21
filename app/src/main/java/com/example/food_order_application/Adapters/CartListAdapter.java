@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.food_order_application.Domains.ItemInCart;
 import com.example.food_order_application.Helpers.Food_Order_Application_Database;
+import com.example.food_order_application.Interfaces.OnChangeClickListener;
 import com.example.food_order_application.R;
 
 import java.util.ArrayList;
@@ -25,8 +26,11 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.CartVi
     ArrayList<ItemInCart> FoodList;
     int CustomarID;
 
-    public CartListAdapter(ArrayList<ItemInCart> FoodList) {
+    OnChangeClickListener Listener;
+
+    public CartListAdapter(ArrayList<ItemInCart> FoodList , OnChangeClickListener listener) {
         this.FoodList = FoodList;
+        this.Listener = listener;
     }
 
     @NonNull
@@ -57,13 +61,14 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.CartVi
                 //Insert in the database and retrieve it from database
                 count =count +1;
                 double total = Math.round(FoodList.get(position).getPrice() * count);
+                // notify the fragment or activity using Listener
+                Listener.OnItemChange(FoodList.get(position).getOrderID() , count , total);
                 db = new Food_Order_Application_Database(cartViewHolder.AddButton5.getContext());
                 if(db.changeQuantityOfOrderByID(FoodList.get(position).getOrderID(),count,total)){
                     cartViewHolder.Quantity_RequiredForRequest.setText(""+count);
                     cartViewHolder.TotalPriceForFood.setText("$"+total);
                     FoodList.get(position).setQuantity(count);
                     FoodList.get(position).setTotalPriceOfItemType(total);
-                    notifyItemChanged(position);
                 }
                 else{
                     Toast.makeText(cartViewHolder.AddButton5.getContext(), "Error in the system,Updates information doesn't occur!",Toast.LENGTH_SHORT).show();
@@ -78,19 +83,21 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.CartVi
                 if(count > 1){
                     count =count -1;
                     double total = Math.round(FoodList.get(position).getPrice() * count);
+                    // notify the fragment or activity using Listener
+                    Listener.OnItemChange(FoodList.get(position).getOrderID() , count , total);
                     db = new Food_Order_Application_Database(cartViewHolder.AddButton5.getContext());
                     if(db.changeQuantityOfOrderByID(FoodList.get(position).getOrderID(),count,total)){
+
                         cartViewHolder.Quantity_RequiredForRequest.setText(""+count);
                         cartViewHolder.TotalPriceForFood.setText("$"+total);
                         FoodList.get(position).setQuantity(count);
                         FoodList.get(position).setTotalPriceOfItemType(total);
-                        notifyItemChanged(position);
                     }
 
                 }
 
             }
-            }
+
         });
     }
 
