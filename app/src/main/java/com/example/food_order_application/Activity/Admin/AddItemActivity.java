@@ -1,26 +1,20 @@
 package com.example.food_order_application.Activity.Admin;
-import static com.example.food_order_application.R.id.addIttem_button;
-import static com.google.android.gms.cast.framework.media.ImagePicker.*;
-
 
 
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,36 +22,21 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.PickVisualMediaRequest;
-import androidx.activity.result.contract.ActivityResultContract;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.food_order_application.Activity.AccountActivities.LoginActivity;
-import com.example.food_order_application.Domains.Customar;
 import com.example.food_order_application.Domains.Item;
 import com.example.food_order_application.Domains.MenuItems;
-import com.example.food_order_application.Encryption_And_Decryption_Algorithm.AESCrypt;
 import com.example.food_order_application.Helpers.Food_Order_Application_Database;
-import com.example.food_order_application.Manifest;
 import com.example.food_order_application.R;
 
-import com.google.android.gms.cast.framework.media.ImagePicker;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.ktx.Firebase;
-
-import java.net.URI;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class AddItemActivity extends AppCompatActivity {
+    ImageButton BackButton;
     Bitmap bm ;
     boolean isValid = true;
    ArrayList<MenuItems> Menues;
@@ -72,7 +51,11 @@ public class AddItemActivity extends AppCompatActivity {
         if(uri != null){
             ContentResolver CR = this.getContentResolver();
             String type = CR.getType(uri);
-             bm = MediaStore.Images.Media.getBitmap(CR,uri);
+            try {
+                bm = MediaStore.Images.Media.getBitmap(CR,uri);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             if( type.contains("image")){
                 selectedItemImage.setImageBitmap(bm);
                 selectedItemImage.setImageURI(uri);
@@ -99,13 +82,22 @@ public class AddItemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_item);
+        BackButton = findViewById(R.id.BackButton1);
+        BackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         Menues = new ArrayList<MenuItems>();
         ArrayList<String> menuesNames = new ArrayList<>();
-        menuesNames.add("Sanwiches"); menuesNames.add("Pizza");
-        menuesNames.add("Drinks");
-        Menues.add(new MenuItems(1,"Sandwiches","Sandwiches.png"));
-        Menues.add(new MenuItems(2,"Pizza","Pizza.png"));
-        Menues.add(new MenuItems(3,"Drinks","Drinks.png"));
+         menuesNames.add("Pizza"); menuesNames.add("Burger");
+        menuesNames.add("Drink"); menuesNames.add("Hotdog"); menuesNames.add("Donut");
+        Menues.add(new MenuItems(1,"Pizza","cat_1"));
+        Menues.add(new MenuItems(2,"Burger","cat_2"));
+        Menues.add(new MenuItems(3,"Hotdog","cat_3"));
+        Menues.add(new MenuItems(4,"Drink","cat_4"));
+        Menues.add(new MenuItems(5,"Donut","cat_5"));
         MenuItemsAdapter = new ArrayAdapter<String>(getBaseContext(), android.R.layout.activity_list_item,menuesNames);
         listofMenues = findViewById(R.id.listofMenues);
         listofMenues.setAdapter(MenuItemsAdapter);

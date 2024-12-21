@@ -21,6 +21,9 @@ import java.util.ArrayList;
 
 public class AllItemsAdapter extends RecyclerView.Adapter<AllItemsAdapter.addItemviewholder>{
     ArrayList<Item> ItemList;
+    public AllItemsAdapter(ArrayList<Item> itemList){
+     this.ItemList =itemList;
+    }
     @NonNull
     @Override
     public addItemviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

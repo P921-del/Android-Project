@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Food_Order_Application</string>
+    <string name="avatar">Avatar</string>
     <string name="Background_intro">BackgroundForIntroActivity</string>
     <string name="The_Only_button_in_the_IntroActivity">Get Started</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

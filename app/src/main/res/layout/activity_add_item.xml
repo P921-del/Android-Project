@@ -16,12 +16,13 @@
         tools:layout_editor_absoluteY="0dp">
 
         <ImageButton
-            android:id="@+id/BackButton"
+            android:id="@+id/BackButton1"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
             android:background="@android:color/transparent"
+            android:contentDescription="Go To Admin Panel"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@+id/AddFoodName"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +41,7 @@
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
-            app:layout_constraintStart_toEndOf="@+id/BackButton"
+            app:layout_constraintStart_toEndOf="@+id/BackButton1"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
@@ -65,7 +66,7 @@
 
         <EditText
             android:id="@+id/Description"
-            android:layout_width="414dp"
+            android:layout_width="0dp"
             android:layout_height="73dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
@@ -79,14 +80,14 @@
             android:outlineSpotShadowColor="@color/main_color"
             android:paddingLeft="15dp"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/AddFoodName"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/AddFoodName"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/AddFoodName" />
 
         <EditText
             android:id="@+id/Price"
-            android:layout_width="396dp"
+            android:layout_width="0dp"
             android:layout_height="51dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
@@ -100,14 +101,14 @@
             android:outlineSpotShadowColor="@color/main_color"
             android:paddingLeft="15dp"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/Description"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/Description"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Description" />
 
         <EditText
             android:id="@+id/Star"
-            android:layout_width="383dp"
+            android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
@@ -121,14 +122,14 @@
             android:outlineSpotShadowColor="@color/main_color"
             android:paddingLeft="15dp"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/Price"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.733"
-            app:layout_constraintStart_toStartOf="@+id/Price"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Price" />
 
         <EditText
             android:id="@+id/Time"
-            android:layout_width="383dp"
+            android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
@@ -142,14 +143,14 @@
             android:outlineSpotShadowColor="@color/main_color"
             android:paddingLeft="15dp"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/Star"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.29"
-            app:layout_constraintStart_toStartOf="@+id/Star"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Star" />
 
         <EditText
             android:id="@+id/Calories"
-            android:layout_width="383dp"
+            android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
@@ -163,13 +164,13 @@
             android:outlineSpotShadowColor="@color/main_color"
             android:paddingLeft="15dp"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/Time"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.733"
-            app:layout_constraintStart_toStartOf="@+id/Time"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Time" />
         <EditText
             android:id="@+id/Quantity"
-            android:layout_width="383dp"
+            android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
@@ -183,9 +184,9 @@
             android:outlineSpotShadowColor="@color/main_color"
             android:paddingLeft="15dp"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/Calories"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.733"
-            app:layout_constraintStart_toStartOf="@+id/Calories"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Calories" />
         <TextView
             android:id="@+id/text_selectMenuItem"

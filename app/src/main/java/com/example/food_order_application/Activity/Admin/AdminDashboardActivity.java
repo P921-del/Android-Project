@@ -16,10 +16,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.food_order_application.Activity.AccountActivities.LoginActivity;
+import com.example.food_order_application.Activity.AccountActivities.SignUpActivity;
 import com.example.food_order_application.R;
 
 public class AdminDashboardActivity extends AppCompatActivity {
-    ConstraintLayout addItemAdminPanel;
+    CardView addItemAdminPanel;
+    CardView ShowAllUsersButton;
+    CardView ShowAllOrdersButton , AddCustomarButton , LogoutButton;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -28,10 +31,38 @@ public class AdminDashboardActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_admin_dashboard);
         addItemAdminPanel = findViewById(R.id.addItemAdminPanel);
+        ShowAllUsersButton = findViewById(R.id.ShowAllUsersButton);
+        ShowAllOrdersButton = findViewById(R.id.ShowAllOrdersButton);
+        AddCustomarButton = findViewById(R.id.AddCustomarButton);
+        LogoutButton = findViewById(R.id.LogoutButton);
         addItemAdminPanel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), AddItemActivity.class));
+            }
+        });
+        ShowAllUsersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), ShowAllUsersActivity.class));
+            }
+        });
+        ShowAllOrdersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), ShowAllOrdersActivity.class));
+            }
+        });
+        AddCustomarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), SignUpActivity.class));
+            }
+        });
+        LogoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), LoginActivity.class));
             }
         });
     }

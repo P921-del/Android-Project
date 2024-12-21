@@ -15,8 +15,6 @@ import java.util.ArrayList;
 
 public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.CategoryViewHolder> {
     ArrayList<MenuItems> Categories;
-    String PictureURL;
-    int drawbleResourceId;
     public CategoriesAdapter(ArrayList<MenuItems> categories) {
         Categories = categories;
     }
@@ -36,13 +34,11 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder categoryViewHolder, int i) {
         MenuItems category = Categories.get(i);
-        drawbleResourceId = categoryViewHolder.itemView.getContext().getResources()
-                        .getIdentifier(category.getCategoryImage(),"drawable",categoryViewHolder.itemView.getContext().getPackageName());
-        categoryViewHolder.categoryImage.setImageResource(drawbleResourceId);
-        categoryViewHolder.categoryName.setText(category.getName());
+        categoryViewHolder.bind(category);
     }
 
      class CategoryViewHolder extends RecyclerView.ViewHolder{
+        int drawbleResourceId;
        ImageView categoryImage;
        TextView categoryName;
        ConstraintLayout CategoryLayout;
@@ -52,5 +48,12 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
             categoryName = itemView.findViewById(R.id.categoryName);
             CategoryLayout = itemView.findViewById(R.id.CategoryLayout);
         }
-    }
+
+         public void bind(MenuItems category) {
+             drawbleResourceId = this.itemView.getContext().getResources()
+                     .getIdentifier(category.getCategoryImage(),"drawable",this.itemView.getContext().getPackageName());
+             categoryImage.setImageResource(drawbleResourceId);
+             categoryName.setText(category.getName());
+         }
+     }
 }
