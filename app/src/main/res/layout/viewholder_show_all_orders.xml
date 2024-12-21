@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#b2b5b9" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/OrderNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_weight="1"
+                android:text="1"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/CustomarNameForShowAllOrders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight=".15"
+                android:text="CustomarName"
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/OrderNumber"
+                app:layout_constraintTop_toTopOf="@+id/OrderNumber" />
+            <TextView
+                android:id="@+id/FoodNameForShowAllOrders"
+                android:layout_weight=".15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+               android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Food Name"
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/CustomarNameForShowAllOrders"
+                app:layout_constraintTop_toTopOf="@+id/CustomarNameForShowAllOrders" />
+            <TextView
+                android:id="@+id/CountOrders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight=".15"
+
+                android:text="Count"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/FoodNameForShowAllOrders"
+                app:layout_constraintStart_toEndOf="@+id/FoodNameForShowAllOrders"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+            <TextView
+                android:id="@+id/TotalPriceForShowAllOrders"
+                android:layout_weight=".15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Price for this food"
+                android:textColor="@color/red"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/CountOrders"
+                app:layout_constraintTop_toTopOf="@+id/CountOrders" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/AcceptedButton"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight=".15"
+                android:background="@drawable/rouder_border"
+                android:text="Accepted"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/TotalPriceForShowAllOrders"
+                app:layout_constraintTop_toTopOf="@+id/TotalPriceForShowAllOrders" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/CancelButton"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rouder_border"
+                android:text="Cancel"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/AcceptedButton"
+                app:layout_constraintHorizontal_bias="0.36"
+                app:layout_constraintStart_toStartOf="@+id/AcceptedButton"
+                app:layout_constraintTop_toBottomOf="@+id/AcceptedButton" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/FoodDetailsButton"
+                android:layout_width="129dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/orange_button"
+                android:text="ShowDetails"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/CustomarNameForShowAllOrders"
+                tools:layout_editor_absoluteX="60dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/additionalInfoLayoutad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/imageImage"
+            app:layout_constraintTop_toBottomOf="@+id/imageImage">
+
+
+            <FrameLayout
+                android:id="@+id/fragment_container2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/browser_actions_bg_grey"
+                >
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>
