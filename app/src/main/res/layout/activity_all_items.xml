@@ -27,7 +27,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.32"
-            app:srcCompat="@drawable/backButtonFlatIconFirst" />
+            app:srcCompat="@drawable/back_button_flaticon_first" />
 
         <TextView
             android:id="@+id/textView50"

@@ -24,7 +24,7 @@
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/Logo" />
+                app:srcCompat="@drawable/project_logo" />
 
             <TextView
                 android:id="@+id/textView31"
@@ -73,7 +73,7 @@
                 android:layout_height="77dp"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/edit_text_in_login_activity_background"
-                android:drawableLeft="@drawable/personIcon"
+                android:drawableLeft="@drawable/person_icon"
                 android:elevation="5dp"
                 android:ems="10"
                 android:hint="Name"
@@ -201,7 +201,7 @@
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/external_login_button_background"
-                android:drawableLeft="@drawable/GoogleIcon"
+                android:drawableLeft="@drawable/google_icon"
                 android:paddingLeft="15dp"
                 android:text="GOOGLE"
                 android:textAllCaps="false"
@@ -215,7 +215,7 @@
                 android:layout_height="57dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/external_login_button_background"
-                android:drawableLeft="@drawable/FacebookIcon"
+                android:drawableLeft="@drawable/facebook_icon"
                 android:paddingLeft="15dp"
                 android:text="FACEBOOK"
                 android:textAllCaps="false"

@@ -4,11 +4,11 @@ plugins {
 
 android {
     namespace = "com.example.food_order_application"
-    compileSdk = 27
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.food_order_application"
-        minSdk = 27
+        minSdk = 34
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"

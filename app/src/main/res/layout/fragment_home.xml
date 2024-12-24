@@ -37,7 +37,7 @@
                             android:layout_marginEnd="20dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/Image_Profile" />
+                            app:srcCompat="@drawable/image_profile2" />
 
                         <TextView
                             android:id="@+id/textView2"
@@ -163,7 +163,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="75dp"
                                 android:background="@drawable/search_input_background"
-                                android:drawableStart="@drawable/SearchIcon_67x67"
+                                android:drawableStart="@drawable/search_icon3"
                                 android:drawablePadding="10dp"
                                 android:ems="10"
                                 android:hint="Search Your Favorite Food"
@@ -194,7 +194,7 @@
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
                             app:layout_constraintHorizontal_bias="0.017"
-                            app:layout_constraintStart_toStartOf="constraintLayout2"
+                            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
                            app:layout_constraintTop_toBottomOf="@id/constraintLayout2" />
 
                         <androidx.recyclerview.widget.RecyclerView
@@ -224,7 +224,7 @@
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
                             app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="constraintLayout2"
+                            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
                             app:layout_constraintTop_toBottomOf="@+id/CategoriesRecyclerView1" />
 
                         <TextView

@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/Logo" />
+        app:srcCompat="@drawable/project_logo" />
 
     <TextView
         android:id="@+id/textView10"
@@ -109,7 +109,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/external_login_button_background"
-        android:drawableLeft="@drawable/GoogleIcon"
+        android:drawableLeft="@drawable/google_icon"
         android:paddingLeft="15dp"
         android:text="GOOGLE"
         android:textAllCaps="false"
@@ -136,7 +136,7 @@
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/external_login_button_background"
-        android:drawableLeft="@drawable/FacebookIcon"
+        android:drawableLeft="@drawable/facebook_icon"
         android:paddingLeft="15dp"
         android:text="FACEBOOK"
         android:textAllCaps="false"

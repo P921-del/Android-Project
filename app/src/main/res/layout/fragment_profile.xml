@@ -98,7 +98,8 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:id="@+id/edit"
                                 android:layout_width="113dp"
-                                android:layout_height="34dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="8dp"
                                 android:background="@drawable/button_blackboder"
                                 android:text="EDIT"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -109,7 +110,7 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:id="@+id/updateinfor"
                                 android:layout_width="113dp"
-                                android:layout_height="34dp"
+                                android:layout_height="48dp"
                                 android:layout_marginTop="52dp"
                                 android:background="@drawable/button_blackboder"
                                 android:text="UPDATE"
@@ -146,7 +147,7 @@
                         app:layout_constraintHorizontal_bias="0.112"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Backcart"
-                        app:srcCompat="@drawable/Image_Profile" />
+                        app:srcCompat="@drawable/image_profile2" />
 
                     <!--                <View-->
                     <!--                    android:id="@+id/view1"-->
@@ -197,7 +198,7 @@
                         <EditText
                             android:id="@+id/EditNameus"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="48dp"
                             android:layout_marginTop="8dp"
                             android:background="@drawable/plaintextboder"
                             android:ems="10"
@@ -230,7 +231,7 @@
                         <EditText
                             android:id="@+id/editjob"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="48dp"
                             android:layout_marginTop="8dp"
                             android:background="@drawable/plaintextboder"
                             android:ems="10"
@@ -255,12 +256,12 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="@+id/editAddressus"
-                            tools:layout_editor_absoluteY="0dp" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <EditText
                             android:id="@+id/editAddressus"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="48dp"
                             android:layout_marginTop="8dp"
                             android:background="@drawable/plaintextboder"
                             android:ems="10"
@@ -286,12 +287,12 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="@+id/editPhoneus"
-                            tools:layout_editor_absoluteY="0dp" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <EditText
                             android:id="@+id/editPhoneus"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="48dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="16dp"
                             android:background="@drawable/plaintextboder"

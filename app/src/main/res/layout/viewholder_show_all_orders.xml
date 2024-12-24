@@ -90,7 +90,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/AcceptedButton"
                 android:layout_width="70dp"
-                android:layout_height="35dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -106,7 +106,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/CancelButton"
                 android:layout_width="70dp"
-                android:layout_height="35dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/rouder_border"
@@ -120,13 +120,16 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/FoodDetailsButton"
                 android:layout_width="129dp"
-                android:layout_height="33dp"
-                android:layout_marginTop="36dp"
-                android:background="@drawable/orange_button"
+                android:layout_height="48dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/orange_background"
                 android:text="ShowDetails"
                 android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/CustomarNameForShowAllOrders"
-                tools:layout_editor_absoluteX="60dp" />
+                app:layout_constraintVertical_bias="0.0" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

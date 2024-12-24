@@ -40,6 +40,7 @@
                     android:id="@+id/FoodPicture2"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
+                    android:contentDescription="Picture for Food"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/burger" />
 
@@ -49,8 +50,8 @@
                 android:id="@+id/FoodPrice2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="144dp"
-                android:layout_marginBottom="52dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="48dp"
                 android:fontFamily="serif"
                 android:text=" $ 35"
                 android:textColor="@color/main_color"
@@ -62,7 +63,7 @@
                 android:id="@+id/FoodTitle2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="72dp"
+                android:layout_marginEnd="12dp"
                 android:fontFamily="serif"
                 android:text="Spacy fresh crab"
                 android:textColor="@color/black"
@@ -70,42 +71,45 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/minusButton2"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.338" />
+                app:layout_constraintVertical_bias="0.088" />
 
             <ImageButton
                 android:id="@+id/minusButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginEnd="20dp"
                 android:background="@android:color/transparent"
-                android:src="@drawable/baseline_alarm_add_24"
-                app:layout_constraintBottom_toBottomOf="@+id/FoodQuantity2"
+                android:contentDescription="minus quantity of food"
+                android:src="@drawable/minus_button3"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/FoodQuantity2"
-                app:layout_constraintTop_toTopOf="@+id/FoodQuantity2"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2" />
 
             <ImageButton
                 android:id="@+id/addButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="52dp"
-                android:layout_marginEnd="16dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="28dp"
                 android:background="@android:color/transparent"
-                android:src="@drawable/baseline_add_circle_outline_24"
+                android:contentDescription="add quantity of food"
+                android:src="@drawable/add_button3"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.129" />
 
             <ImageButton
                 android:id="@+id/deleteButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="4dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
                 android:background="@android:color/transparent"
-                android:src="@drawable/baseline_delete_24"
+                android:contentDescription="delete Food"
+                android:src="@drawable/remove_button3"
                 app:layout_constraintEnd_toEndOf="@+id/addButton2"
-                app:layout_constraintHorizontal_bias="0.572"
+                app:layout_constraintHorizontal_bias="0.591"
                 app:layout_constraintStart_toStartOf="@+id/minusButton2"
                 app:layout_constraintTop_toBottomOf="@+id/minusButton2" />
 
@@ -113,13 +117,13 @@
                 android:id="@+id/FoodQuantity2"
                 android:layout_width="39dp"
                 android:layout_height="41dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="16dp"
                 android:text="10"
-                android:textSize="20sp"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="@+id/addButton2"
                 app:layout_constraintEnd_toStartOf="@+id/addButton2"
                 app:layout_constraintTop_toTopOf="@+id/addButton2"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.857" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
